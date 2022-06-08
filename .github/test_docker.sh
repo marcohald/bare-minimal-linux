@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# This script is supposed to be executed by Travis CI.
+# This script is supposed to be executed by GitHub workflow.
 
 set -e
 
