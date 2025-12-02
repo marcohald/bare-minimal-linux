@@ -94,14 +94,19 @@ jobs:
       run: |
         cd ./src
         bash ./12_get_systemd-boot.sh
+
+    - run: df -h
     - name: 'Step 13 - Prepare ISO Image'
       run: |
         cd ./src
-        bash ./13_prepare_iso.sh
+        sudo bash ./13_prepare_iso.sh
+    - run: df -h
     - name: 'Step 14 - Generate ISO Image'
       run: |
         cd ./src
         bash ./14_generate_iso.sh
+
+    - run: df -h
     - name: upload iso as artifact
       uses: actions/upload-artifact@v4
       with:
